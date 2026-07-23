@@ -6,13 +6,15 @@
     <title>Pre BBD Workshop 2026 - Agenda</title>
     <style>
         :root {
-            --primary: #2874f0;
-            --primary-dark: #004bb7;
-            --bg-gray: #f1f3f6;
+            --primary: #a30d43;         /* Flipkart Minutes Crimson Magenta */
+            --primary-dark: #7a0831;    /* Darker shade for contrast */
+            --accent-yellow: #ffe600;   /* Bright Yellow from "MINUTES" */
+            --accent-green: #1fa65a;    /* Green from scooter driver shirt / badge */
+            --bg-gray: #f8f1f3;        /* Soft background tint */
             --card-bg: #ffffff;
-            --text-dark: #212121;
+            --text-dark: #1f1f1f;
             --text-muted: #666666;
-            --border: #e0e0e0;
+            --border: #e2d2d7;
         }
 
         * {
@@ -33,29 +35,41 @@
         .container {
             max-width: 1000px;
             margin: 0 auto;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
         }
 
         header {
             background: linear-gradient(135deg, var(--primary), var(--primary-dark));
             color: white;
-            padding: 16px;
+            padding: 20px 16px;
             border-radius: 10px 10px 0 0;
         }
 
         header h1 {
-            font-size: 20px;
+            font-size: 22px;
+            font-weight: 800;
+            letter-spacing: -0.3px;
             margin-bottom: 4px;
+            color: white;
+        }
+
+        header h1 span {
+            color: var(--accent-yellow);
+            font-style: italic;
         }
 
         header p {
-            font-size: 12px;
-            opacity: 0.9;
+            font-size: 13px;
+            opacity: 0.95;
+            font-weight: 500;
         }
 
         /* Mobile-first Horizontal Scroll Tabs */
         .nav-wrapper {
             background: white;
-            border-bottom: 1px solid var(--border);
+            border-bottom: 2px solid var(--border);
             position: sticky;
             top: 0;
             z-index: 100;
@@ -65,7 +79,7 @@
             display: flex;
             overflow-x: auto;
             white-space: nowrap;
-            padding: 8px 12px;
+            padding: 10px 12px;
             gap: 8px;
             -webkit-overflow-scrolling: touch;
         }
@@ -76,21 +90,23 @@
         }
 
         .tab-btn {
-            background: var(--bg-gray);
+            background: #f0e6e8;
             border: 1px solid var(--border);
-            padding: 8px 14px;
+            padding: 8px 16px;
             border-radius: 20px;
-            font-weight: 600;
+            font-weight: 700;
             font-size: 13px;
-            color: var(--text-dark);
+            color: var(--primary-dark);
             cursor: pointer;
             flex-shrink: 0;
+            transition: all 0.2s ease;
         }
 
         .tab-btn.active {
             background: var(--primary);
             color: white;
             border-color: var(--primary);
+            box-shadow: 0 2px 6px rgba(163, 13, 67, 0.3);
         }
 
         .search-container {
@@ -100,11 +116,17 @@
 
         .search-box {
             width: 100%;
-            padding: 10px 12px;
+            padding: 10px 14px;
             border: 1px solid var(--border);
-            border-radius: 6px;
+            border-radius: 8px;
             outline: none;
             font-size: 14px;
+            background-color: #faf7f8;
+        }
+
+        .search-box:focus {
+            border-color: var(--primary);
+            background-color: #fff;
         }
 
         /* Content Area */
@@ -123,11 +145,12 @@
         }
 
         .day-title {
-            font-size: 16px;
-            color: var(--primary-dark);
-            margin-bottom: 12px;
+            font-size: 17px;
+            color: var(--primary);
+            margin-bottom: 14px;
             padding-bottom: 6px;
-            border-bottom: 2px solid var(--primary);
+            border-bottom: 3px solid var(--accent-yellow);
+            font-weight: 700;
         }
 
         /* Standard Table (Desktop View) */
@@ -138,35 +161,36 @@
         }
 
         th, td {
-            padding: 10px;
+            padding: 12px 10px;
             text-align: left;
             border-bottom: 1px solid var(--border);
         }
 
         th {
-            background-color: #f8f9fa;
-            color: var(--text-muted);
+            background-color: #fcf4f6;
+            color: var(--primary-dark);
             font-weight: 700;
             font-size: 11px;
             text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
         .badge {
             display: inline-block;
-            padding: 2px 6px;
-            border-radius: 10px;
-            font-size: 10px;
-            font-weight: 600;
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 700;
         }
 
-        .badge-monologue { background: #e3f2fd; color: #0d47a1; }
-        .badge-interactive { background: #e8f5e9; color: #1b5e20; }
-        .badge-break { background: #fff3e0; color: #e65100; }
+        .badge-monologue { background: #ffe6ec; color: var(--primary); }
+        .badge-interactive { background: #e6f7ed; color: #116836; }
+        .badge-break { background: #fff8df; color: #8a6200; }
         .badge-social { background: #f3e5f5; color: #4a148c; }
 
         .time-col {
             font-weight: 700;
-            color: var(--primary-dark);
+            color: var(--primary);
             white-space: nowrap;
         }
 
@@ -182,16 +206,17 @@
 
             tr {
                 border: 1px solid var(--border);
+                border-left: 4px solid var(--primary);
                 border-radius: 8px;
-                margin-bottom: 10px;
-                padding: 10px;
+                margin-bottom: 12px;
+                padding: 12px;
                 background: #fff;
-                box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+                box-shadow: 0 2px 4px rgba(0,0,0,0.03);
             }
 
             td {
                 border: none;
-                padding: 3px 0;
+                padding: 2px 0;
             }
 
             .time-col {
@@ -212,13 +237,14 @@
             }
 
             td:nth-child(4) {
-                margin-top: 4px;
+                margin-top: 6px;
             }
 
             td:nth-child(5) {
                 font-size: 12px;
                 font-weight: 600;
                 color: var(--primary-dark);
+                margin-top: 4px;
             }
 
             td:nth-child(5)::before {
@@ -233,7 +259,7 @@
 
 <div class="container">
     <header>
-        <h1>Pre BBD Workshop 2026</h1>
+        <h1>Pre BBD Workshop 2026 <span>MINUTES</span></h1>
         <p>📍 29th–31st July 2026 | Minutes Conference Hall</p>
     </header>
 
@@ -261,12 +287,12 @@
                 <tbody>
                     <tr><td class="time-col">09:30 - 10:05</td><td>Welcome Minutes</td><td>1) Welcome to Minutes Pre BBD Workshop<br>2) Last 1 yr Journey</td><td><span class="badge badge-monologue">Monologue</span></td><td>Sebin/Chetan</td></tr>
                     <tr><td class="time-col">10:05 - 11:00</td><td>Introduction</td><td>1) BBD 25 (Hits & Misses)<br>2) BBD 26 for Minutes</td><td><span class="badge badge-monologue">Monologue</span></td><td>Sebin/Chetan</td></tr>
-                    <tr style="background:#fff3e0"><td class="time-col">11:00 - 11:15</td><td>Tea Break ☕</td><td>-</td><td><span class="badge badge-break">Break</span></td><td>-</td></tr>
+                    <tr style="background:#fffdf0"><td class="time-col">11:00 - 11:15</td><td>Tea Break ☕</td><td>-</td><td><span class="badge badge-break">Break</span></td><td>-</td></tr>
                     <tr><td class="time-col">11:15 - 12:45</td><td>LM Planning</td><td>1) BBD 25 (Hits & Misses)<br>2) BBD 26 LM Supply planning</td><td><span class="badge badge-monologue">Monologue</span></td><td>Sangeet/Parth</td></tr>
                     <tr><td class="time-col">12:45 - 13:15</td><td>Network & IB</td><td>Network & IB Planning</td><td><span class="badge badge-interactive">Interactive</span></td><td>Kalpesh/Gaurav</td></tr>
-                    <tr style="background:#fff3e0"><td class="time-col">13:15 - 14:30</td><td>Lunch & Check in 🍱</td><td>-</td><td><span class="badge badge-break">Break</span></td><td>-</td></tr>
+                    <tr style="background:#fffdf0"><td class="time-col">13:15 - 14:30</td><td>Lunch & Check in 🍱</td><td>-</td><td><span class="badge badge-break">Break</span></td><td>-</td></tr>
                     <tr><td class="time-col">14:30 - 16:00</td><td>DS Supply</td><td>BBD 26 for Minutes & DS Supply planning</td><td><span class="badge badge-interactive">Interactive</span></td><td>Kalpesh/Chirant/Shubham</td></tr>
-                    <tr style="background:#fff3e0"><td class="time-col">16:00 - 16:15</td><td>Tea Break ☕</td><td>-</td><td><span class="badge badge-break">Break</span></td><td>-</td></tr>
+                    <tr style="background:#fffdf0"><td class="time-col">16:00 - 16:15</td><td>Tea Break ☕</td><td>-</td><td><span class="badge badge-break">Break</span></td><td>-</td></tr>
                     <tr><td class="time-col">16:15 - 16:30</td><td>CT CX</td><td>CT CX</td><td><span class="badge badge-interactive">Interactive</span></td><td>Kalpesh/Sharan</td></tr>
                     <tr><td class="time-col">16:30 - 16:45</td><td>Store Support</td><td>Store Support</td><td><span class="badge badge-interactive">Interactive</span></td><td>Kalpesh/Sharan/Karthikeyan</td></tr>
                     <tr><td class="time-col">16:45 - 17:00</td><td>Inventory & OB</td><td>Inventory & OB Strategy</td><td><span class="badge badge-interactive">Interactive</span></td><td>Kalpesh/Bivojit</td></tr>
@@ -285,16 +311,16 @@
                 </thead>
                 <tbody>
                     <tr><td class="time-col">09:30 - 10:30</td><td>West Zone</td><td>West Zone: Plan & Execution Plan</td><td><span class="badge badge-interactive">Interactive</span></td><td>Sai, Himanshu, Niranjan & Team</td></tr>
-                    <tr style="background:#fff3e0"><td class="time-col">10:30 - 10:45</td><td>Tea Break ☕</td><td>-</td><td><span class="badge badge-break">Break</span></td><td>-</td></tr>
+                    <tr style="background:#fffdf0"><td class="time-col">10:30 - 10:45</td><td>Tea Break ☕</td><td>-</td><td><span class="badge badge-break">Break</span></td><td>-</td></tr>
                     <tr><td class="time-col">10:45 - 11:45</td><td>South Zone</td><td>South Zone: Plan & Execution Plan</td><td><span class="badge badge-interactive">Interactive</span></td><td>Sankeerth & Team</td></tr>
                     <tr><td class="time-col">11:45 - 12:45</td><td>LM Design</td><td>LM Design Strategy</td><td><span class="badge badge-interactive">Interactive</span></td><td>Priyesh & Team</td></tr>
                     <tr><td class="time-col">12:45 - 13:45</td><td>DS & Network Design</td><td>DS & Network Design Strategy</td><td><span class="badge badge-interactive">Interactive</span></td><td>Hemanth & Team</td></tr>
-                    <tr style="background:#fff3e0"><td class="time-col">13:45 - 14:30</td><td>Lunch 🍱</td><td>-</td><td><span class="badge badge-break">Break</span></td><td>-</td></tr>
+                    <tr style="background:#fffdf0"><td class="time-col">13:45 - 14:30</td><td>Lunch 🍱</td><td>-</td><td><span class="badge badge-break">Break</span></td><td>-</td></tr>
                     <tr><td class="time-col">14:30 - 15:30</td><td>SH Strategy</td><td>SH & LH Strategy</td><td><span class="badge badge-interactive">Interactive</span></td><td>Amer, Sandeep, Indranil</td></tr>
                     <tr><td class="time-col">15:30 - 15:50</td><td>Leader's Talk</td><td>Cross Functional Leadership Connect</td><td><span class="badge badge-interactive">Interactive</span></td><td>Bhujangappa</td></tr>
-                    <tr style="background:#fff3e0"><td class="time-col">15:50 - 16:00</td><td>Tea Break ☕</td><td>-</td><td><span class="badge badge-break">Break</span></td><td>-</td></tr>
+                    <tr style="background:#fffdf0"><td class="time-col">15:50 - 16:00</td><td>Tea Break ☕</td><td>-</td><td><span class="badge badge-break">Break</span></td><td>-</td></tr>
                     <tr><td class="time-col">16:00 - 18:00</td><td>Leadership Connects</td><td>Rapid Fire Leadership Sessions (Sri Krishnan, John James, Bapuji, Gunjan, Mani, Prabhakar, Anoop, R Srnivasan, Hemant Badri)</td><td><span class="badge badge-interactive">Interactive</span></td><td>Leadership Team</td></tr>
-                    <tr style="background:#f3e5f5"><td class="time-col">19:00 - 21:00</td><td>Party & Gala</td><td><strong>DJ, Cocktail & Dinner</strong> 🍸🎉</td><td><span class="badge badge-social">Social Event</span></td><td>All Attendees</td></tr>
+                    <tr style="background:#fef3f7"><td class="time-col">19:00 - 21:00</td><td>Party & Gala</td><td><strong>DJ, Cocktail & Dinner</strong> 🍸🎉</td><td><span class="badge badge-social">Social Event</span></td><td>All Attendees</td></tr>
                 </tbody>
             </table>
         </div>
@@ -308,11 +334,11 @@
                 </thead>
                 <tbody>
                     <tr><td class="time-col">10:00 - 11:30</td><td>North Execution</td><td>North Zone Execution Plan & Support Required</td><td><span class="badge badge-interactive">Interactive</span></td><td>Anupam & Team</td></tr>
-                    <tr style="background:#fff3e0"><td class="time-col">11:30 - 11:45</td><td>Tea Break ☕</td><td>-</td><td><span class="badge badge-break">Break</span></td><td>-</td></tr>
+                    <tr style="background:#fffdf0"><td class="time-col">11:30 - 11:45</td><td>Tea Break ☕</td><td>-</td><td><span class="badge badge-break">Break</span></td><td>-</td></tr>
                     <tr><td class="time-col">11:45 - 13:15</td><td>East Execution</td><td>East Zone Execution Plan & Support Required</td><td><span class="badge badge-interactive">Interactive</span></td><td>Amit & Team</td></tr>
-                    <tr style="background:#fff3e0"><td class="time-col">13:15 - 14:00</td><td>Lunch 🍱</td><td>-</td><td><span class="badge badge-break">Break</span></td><td>-</td></tr>
+                    <tr style="background:#fffdf0"><td class="time-col">13:15 - 14:00</td><td>Lunch 🍱</td><td>-</td><td><span class="badge badge-break">Break</span></td><td>-</td></tr>
                     <tr><td class="time-col">14:00 - 15:30</td><td>West Execution</td><td>West Zone Execution Plan & Support Required</td><td><span class="badge badge-interactive">Interactive</span></td><td>Sai, Himanshu, Niranjan & Team</td></tr>
-                    <tr style="background:#fff3e0"><td class="time-col">15:30 - 15:45</td><td>Tea Break ☕</td><td>-</td><td><span class="badge badge-break">Break</span></td><td>-</td></tr>
+                    <tr style="background:#fffdf0"><td class="time-col">15:30 - 15:45</td><td>Tea Break ☕</td><td>-</td><td><span class="badge badge-break">Break</span></td><td>-</td></tr>
                     <tr><td class="time-col">15:45 - 17:15</td><td>South Execution</td><td>South Zone Execution Plan & Support Required</td><td><span class="badge badge-interactive">Interactive</span></td><td>Sankeerth & Team</td></tr>
                     <tr><td class="time-col">17:15 - 17:30</td><td>Photo Session</td><td>Group Photo 📸</td><td><span class="badge badge-social">All Attendees</span></td><td>-</td></tr>
                     <tr><td class="time-col">17:30 - 18:00</td><td>Closure</td><td>Closing Talk & Q&A Session</td><td><span class="badge badge-monologue">Monologue</span></td><td>Renuka & Bapuji</td></tr>
@@ -325,22 +351,18 @@
 
 <script>
     function selectTab(button, tabId) {
-        // Reset all buttons
         var buttons = document.querySelectorAll('.tab-btn');
         buttons.forEach(function(btn) {
             btn.classList.remove('active');
         });
 
-        // Reset all day panels
         var panels = document.querySelectorAll('.day-panel');
         panels.forEach(function(panel) {
             panel.classList.remove('active');
         });
 
-        // Set active button
         button.classList.add('active');
 
-        // Show selected panel
         if (tabId === 'all') {
             panels.forEach(function(panel) {
                 panel.classList.add('active');
