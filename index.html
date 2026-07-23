@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Pre BBD Workshop 2026 - Agenda</title>
+    <style>
+        :root {
+            --primary: #2874f0;
+            --primary-dark: #004bb7;
+            --bg-gray: #f1f3f6;
+            --card-bg: #ffffff;
+            --text-dark: #212121;
+            --text-muted: #666666;
+            --border: #e0e0e0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            background-color: var(--bg-gray);
+            color: var(--text-dark);
+            padding: 12px;
+            line-height: 1.4;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            padding: 16px;
+            border-radius: 10px 10px 0 0;
+        }
+
+        header h1 {
+            font-size: 20px;
+            margin-bottom: 4px;
+        }
+
+        header p {
+            font-size: 12px;
+            opacity: 0.9;
+        }
+
+        /* Mobile-first Horizontal Scroll Tabs */
+        .nav-wrapper {
+            background: white;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .tabs {
+            display: flex;
+            overflow-x: auto;
+            white-space: nowrap;
+            padding: 8px 12px;
+            gap: 8px;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        .tabs::-webkit-scrollbar {
+            display: none;
+        }
+
+        .tab-btn {
+            background: var(--bg-gray);
+            border: 1px solid var(--border);
+            padding: 8px 14px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 13px;
+            color: var(--text-dark);
+            cursor: pointer;
+            flex-shrink: 0;
+        }
+
+        .tab-btn.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        .search-container {
+            padding: 10px 12px;
+            background: white;
+        }
+
+        .search-box {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            outline: none;
+            font-size: 14px;
+        }
+
+        /* Content Area */
+        .content-area {
+            background: white;
+            padding: 16px;
+            border-radius: 0 0 10px 10px;
+        }
+
+        .day-panel {
+            display: none;
+        }
+
+        .day-panel.active {
+            display: block;
+        }
+
+        .day-title {
+            font-size: 16px;
+            color: var(--primary-dark);
+            margin-bottom: 12px;
+            padding-bottom: 6px;
+            border-bottom: 2px solid var(--primary);
+        }
+
+        /* Standard Table (Desktop View) */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+
+        th {
+            background-color: #f8f9fa;
+            color: var(--text-muted);
+            font-weight: 700;
+            font-size: 11px;
+            text-transform: uppercase;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 2px 6px;
+            border-radius: 10px;
+            font-size: 10px;
+            font-weight: 600;
+        }
+
+        .badge-monologue { background: #e3f2fd; color: #0d47a1; }
+        .badge-interactive { background: #e8f5e9; color: #1b5e20; }
+        .badge-break { background: #fff3e0; color: #e65100; }
+        .badge-social { background: #f3e5f5; color: #4a148c; }
+
+        .time-col {
+            font-weight: 700;
+            color: var(--primary-dark);
+            white-space: nowrap;
+        }
+
+        /* MOBILE RESPONSIVE CARDS (Converts table to cards under 768px) */
+        @media (max-width: 768px) {
+            table, thead, tbody, th, td, tr {
+                display: block;
+            }
+
+            thead {
+                display: none; /* Hide table headers on mobile */
+            }
+
+            tr {
+                border: 1px solid var(--border);
+                border-radius: 8px;
+                margin-bottom: 10px;
+                padding: 10px;
+                background: #fff;
+                box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            }
+
+            td {
+                border: none;
+                padding: 3px 0;
+            }
+
+            .time-col {
+                font-size: 14px;
+                margin-bottom: 4px;
+            }
+
+            td:nth-child(2) {
+                font-weight: 700;
+                font-size: 15px;
+                color: var(--text-dark);
+            }
+
+            td:nth-child(3) {
+                font-size: 13px;
+                color: var(--text-muted);
+                margin: 4px 0;
+            }
+
+            td:nth-child(4) {
+                margin-top: 4px;
+            }
+
+            td:nth-child(5) {
+                font-size: 12px;
+                font-weight: 600;
+                color: var(--primary-dark);
+            }
+
+            td:nth-child(5)::before {
+                content: "👤 Facilitator: ";
+                color: var(--text-muted);
+                font-weight: 400;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Pre BBD Workshop 2026</h1>
+        <p>📍 29th–31st July 2026 | Minutes Conference Hall</p>
+    </header>
+
+    <div class="nav-wrapper">
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="day1" onclick="selectTab(this, 'day1')">Day 1 (29 Jul)</button>
+            <button class="tab-btn" data-tab="day2" onclick="selectTab(this, 'day2')">Day 2 (30 Jul)</button>
+            <button class="tab-btn" data-tab="day3" onclick="selectTab(this, 'day3')">Day 3 (31 Jul)</button>
+            <button class="tab-btn" data-tab="all" onclick="selectTab(this, 'all')">Show All Days</button>
+        </div>
+        <div class="search-container">
+            <input type="text" id="searchInput" class="search-box" placeholder="🔍 Search session or speaker..." onkeyup="filterAgenda()">
+        </div>
+    </div>
+
+    <div class="content-area">
+
+        <!-- DAY 1 PANEL -->
+        <div id="day1" class="day-panel active">
+            <h2 class="day-title">Day 1: Kickoff & Operations (29 Jul)</h2>
+            <table>
+                <thead>
+                    <tr><th>Time</th><th>Segment</th><th>Content</th><th>Type</th><th>Facilitator</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td class="time-col">09:30 - 10:05</td><td>Welcome Minutes</td><td>1) Welcome to Minutes Pre BBD Workshop<br>2) Last 1 yr Journey</td><td><span class="badge badge-monologue">Monologue</span></td><td>Sebin/Chetan</td></tr>
+                    <tr><td class="time-col">10:05 - 11:00</td><td>Introduction</td><td>1) BBD 25 (Hits & Misses)<br>2) BBD 26 for Minutes</td><td><span class="badge badge-monologue">Monologue</span></td><td>Sebin/Chetan</td></tr>
+                    <tr style="background:#fff3e0"><td class="time-col">11:00 - 11:15</td><td>Tea Break ☕</td><td>-</td><td><span class="badge badge-break">Break</span></td><td>-</td></tr>
+                    <tr><td class="time-col">11:15 - 12:45</td><td>LM Planning</td><td>1) BBD 25 (Hits & Misses)<br>2) BBD 26 LM Supply planning</td><td><span class="badge badge-monologue">Monologue</span></td><td>Sangeet/Parth</td></tr>
+                    <tr><td class="time-col">12:45 - 13:15</td><td>Network & IB</td><td>Network & IB Planning</td><td><span class="badge badge-interactive">Interactive</span></td><td>Kalpesh/Gaurav</td></tr>
+                    <tr style="background:#fff3e0"><td class="time-col">13:15 - 14:30</td><td>Lunch & Check in 🍱</td><td>-</td><td><span class="badge badge-break">Break</span></td><td>-</td></tr>
+                    <tr><td class="time-col">14:30 - 16:00</td><td>DS Supply</td><td>BBD 26 for Minutes & DS Supply planning</td><td><span class="badge badge-interactive">Interactive</span></td><td>Kalpesh/Chirant/Shubham</td></tr>
+                    <tr style="background:#fff3e0"><td class="time-col">16:00 - 16:15</td><td>Tea Break ☕</td><td>-</td><td><span class="badge badge-break">Break</span></td><td>-</td></tr>
+                    <tr><td class="time-col">16:15 - 16:30</td><td>CT CX</td><td>CT CX</td><td><span class="badge badge-interactive">Interactive</span></td><td>Kalpesh/Sharan</td></tr>
+                    <tr><td class="time-col">16:30 - 16:45</td><td>Store Support</td><td>Store Support</td><td><span class="badge badge-interactive">Interactive</span></td><td>Kalpesh/Sharan/Karthikeyan</td></tr>
+                    <tr><td class="time-col">16:45 - 17:00</td><td>Inventory & OB</td><td>Inventory & OB Strategy</td><td><span class="badge badge-interactive">Interactive</span></td><td>Kalpesh/Bivojit</td></tr>
+                    <tr><td class="time-col">17:00 - 18:00</td><td>North Zone</td><td>North Zone: Plan, Important Days & Execution Plan</td><td><span class="badge badge-interactive">Interactive</span></td><td>Anupam & Team</td></tr>
+                    <tr><td class="time-col">18:00 - 19:00</td><td>East Zone</td><td>East Zone: Plan, Important Days & Execution Plan</td><td><span class="badge badge-interactive">Interactive</span></td><td>Amit & Team</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- DAY 2 PANEL -->
+        <div id="day2" class="day-panel">
+            <h2 class="day-title">Day 2: Design, Leadership & Social (30 Jul)</h2>
+            <table>
+                <thead>
+                    <tr><th>Time</th><th>Segment</th><th>Content</th><th>Type</th><th>Facilitator</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td class="time-col">09:30 - 10:30</td><td>West Zone</td><td>West Zone: Plan & Execution Plan</td><td><span class="badge badge-interactive">Interactive</span></td><td>Sai, Himanshu, Niranjan & Team</td></tr>
+                    <tr style="background:#fff3e0"><td class="time-col">10:30 - 10:45</td><td>Tea Break ☕</td><td>-</td><td><span class="badge badge-break">Break</span></td><td>-</td></tr>
+                    <tr><td class="time-col">10:45 - 11:45</td><td>South Zone</td><td>South Zone: Plan & Execution Plan</td><td><span class="badge badge-interactive">Interactive</span></td><td>Sankeerth & Team</td></tr>
+                    <tr><td class="time-col">11:45 - 12:45</td><td>LM Design</td><td>LM Design Strategy</td><td><span class="badge badge-interactive">Interactive</span></td><td>Priyesh & Team</td></tr>
+                    <tr><td class="time-col">12:45 - 13:45</td><td>DS & Network Design</td><td>DS & Network Design Strategy</td><td><span class="badge badge-interactive">Interactive</span></td><td>Hemanth & Team</td></tr>
+                    <tr style="background:#fff3e0"><td class="time-col">13:45 - 14:30</td><td>Lunch 🍱</td><td>-</td><td><span class="badge badge-break">Break</span></td><td>-</td></tr>
+                    <tr><td class="time-col">14:30 - 15:30</td><td>SH Strategy</td><td>SH & LH Strategy</td><td><span class="badge badge-interactive">Interactive</span></td><td>Amer, Sandeep, Indranil</td></tr>
+                    <tr><td class="time-col">15:30 - 15:50</td><td>Leader's Talk</td><td>Cross Functional Leadership Connect</td><td><span class="badge badge-interactive">Interactive</span></td><td>Bhujangappa</td></tr>
+                    <tr style="background:#fff3e0"><td class="time-col">15:50 - 16:00</td><td>Tea Break ☕</td><td>-</td><td><span class="badge badge-break">Break</span></td><td>-</td></tr>
+                    <tr><td class="time-col">16:00 - 18:00</td><td>Leadership Connects</td><td>Rapid Fire Leadership Sessions (Sri Krishnan, John James, Bapuji, Gunjan, Mani, Prabhakar, Anoop, R Srnivasan, Hemant Badri)</td><td><span class="badge badge-interactive">Interactive</span></td><td>Leadership Team</td></tr>
+                    <tr style="background:#f3e5f5"><td class="time-col">19:00 - 21:00</td><td>Party & Gala</td><td><strong>DJ, Cocktail & Dinner</strong> 🍸🎉</td><td><span class="badge badge-social">Social Event</span></td><td>All Attendees</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- DAY 3 PANEL -->
+        <div id="day3" class="day-panel">
+            <h2 class="day-title">Day 3: Deep-Dive Execution (31 Jul)</h2>
+            <table>
+                <thead>
+                    <tr><th>Time</th><th>Segment</th><th>Content</th><th>Type</th><th>Facilitator</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td class="time-col">10:00 - 11:30</td><td>North Execution</td><td>North Zone Execution Plan & Support Required</td><td><span class="badge badge-interactive">Interactive</span></td><td>Anupam & Team</td></tr>
+                    <tr style="background:#fff3e0"><td class="time-col">11:30 - 11:45</td><td>Tea Break ☕</td><td>-</td><td><span class="badge badge-break">Break</span></td><td>-</td></tr>
+                    <tr><td class="time-col">11:45 - 13:15</td><td>East Execution</td><td>East Zone Execution Plan & Support Required</td><td><span class="badge badge-interactive">Interactive</span></td><td>Amit & Team</td></tr>
+                    <tr style="background:#fff3e0"><td class="time-col">13:15 - 14:00</td><td>Lunch 🍱</td><td>-</td><td><span class="badge badge-break">Break</span></td><td>-</td></tr>
+                    <tr><td class="time-col">14:00 - 15:30</td><td>West Execution</td><td>West Zone Execution Plan & Support Required</td><td><span class="badge badge-interactive">Interactive</span></td><td>Sai, Himanshu, Niranjan & Team</td></tr>
+                    <tr style="background:#fff3e0"><td class="time-col">15:30 - 15:45</td><td>Tea Break ☕</td><td>-</td><td><span class="badge badge-break">Break</span></td><td>-</td></tr>
+                    <tr><td class="time-col">15:45 - 17:15</td><td>South Execution</td><td>South Zone Execution Plan & Support Required</td><td><span class="badge badge-interactive">Interactive</span></td><td>Sankeerth & Team</td></tr>
+                    <tr><td class="time-col">17:15 - 17:30</td><td>Photo Session</td><td>Group Photo 📸</td><td><span class="badge badge-social">All Attendees</span></td><td>-</td></tr>
+                    <tr><td class="time-col">17:30 - 18:00</td><td>Closure</td><td>Closing Talk & Q&A Session</td><td><span class="badge badge-monologue">Monologue</span></td><td>Renuka & Bapuji</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    function selectTab(button, tabId) {
+        // Reset all buttons
+        var buttons = document.querySelectorAll('.tab-btn');
+        buttons.forEach(function(btn) {
+            btn.classList.remove('active');
+        });
+
+        // Reset all day panels
+        var panels = document.querySelectorAll('.day-panel');
+        panels.forEach(function(panel) {
+            panel.classList.remove('active');
+        });
+
+        // Set active button
+        button.classList.add('active');
+
+        // Show selected panel
+        if (tabId === 'all') {
+            panels.forEach(function(panel) {
+                panel.classList.add('active');
+            });
+        } else {
+            document.getElementById(tabId).classList.add('active');
+        }
+    }
+
+    function filterAgenda() {
+        var input = document.getElementById('searchInput').value.toLowerCase();
+        var rows = document.querySelectorAll('tbody tr');
+
+        rows.forEach(function(row) {
+            var text = row.innerText.toLowerCase();
+            if (text.indexOf(input) > -1) {
+                row.style.display = "";
+            } else {
+                row.style.display = "none";
+            }
+        });
+    }
+</script>
+
+</body>
+</html>
