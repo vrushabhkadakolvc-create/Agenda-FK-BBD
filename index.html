@@ -247,6 +247,11 @@
                 margin-top: 4px;
             }
 
+            /* Hide empty mobile facilitator label for break rows */
+            tr.break-row td:nth-child(5)::before {
+                content: "";
+            }
+
             td:nth-child(5)::before {
                 content: "👤 Facilitator: ";
                 color: var(--text-muted);
@@ -279,7 +284,7 @@
 
         <!-- DAY 1 PANEL -->
         <div id="day1" class="day-panel active">
-            <h2 class="day-title">Day 1: </h2>
+            <h2 class="day-title">Day 1:</h2>
             <table>
                 <thead>
                     <tr><th>Time</th><th>Segment</th><th>Content</th><th>Type</th><th>Facilitator</th></tr>
@@ -287,15 +292,15 @@
                 <tbody>
                     <tr><td class="time-col">09:30 - 10:05</td><td>Welcome Minutes</td><td>1) Welcome to Minutes Pre BBD Workshop<br>2) Last 1 yr Journey</td><td><span class="badge badge-monologue">Monologue</span></td><td>Sebin/Chetan</td></tr>
                     <tr><td class="time-col">10:05 - 11:00</td><td>Introduction</td><td>1) BBD 25 (Hits & Misses)<br>2) BBD 26 for Minutes</td><td><span class="badge badge-monologue">Monologue</span></td><td>Sebin/Chetan</td></tr>
-                    <tr style="background:#fffdf0"><td class="time-col">11:00 - 11:15</td><td>Tea Break ☕</td><td>-</td><td><span class="badge badge-break">Break</span></td><td>-</td></tr>
+                    <tr class="break-row" style="background:#fffdf0"><td class="time-col">11:00 - 11:15</td><td>Tea Break ☕</td><td></td><td></td><td></td></tr>
                     <tr><td class="time-col">11:15 - 12:45</td><td>LM Planning</td><td>1) BBD 25 (Hits & Misses)<br>2) BBD 26 LM Supply planning</td><td><span class="badge badge-monologue">Monologue</span></td><td>Sangeet/Parth</td></tr>
-                    <tr><td class="time-col">12:45 - 13:15</td><td>Network & IB</td><td>Network & IB Planning</td><td><span class="badge badge-interactive">Interactive</span></td><td>Kalpesh/Gaurav</td></tr>
-                    <tr style="background:#fffdf0"><td class="time-col">13:15 - 14:30</td><td>Lunch & Check in 🍱</td><td>-</td><td><span class="badge badge-break">Break</span></td><td>-</td></tr>
-                    <tr><td class="time-col">14:30 - 16:00</td><td>DS Supply</td><td>BBD 26 for Minutes & DS Supply planning</td><td><span class="badge badge-interactive">Interactive</span></td><td>Kalpesh/Chirant/Shubham</td></tr>
-                    <tr style="background:#fffdf0"><td class="time-col">16:00 - 16:15</td><td>Tea Break ☕</td><td>-</td><td><span class="badge badge-break">Break</span></td><td>-</td></tr>
-                    <tr><td class="time-col">16:15 - 16:30</td><td>CT CX</td><td>CT CX</td><td><span class="badge badge-interactive">Interactive</span></td><td>Kalpesh/Sharan</td></tr>
-                    <tr><td class="time-col">16:30 - 16:45</td><td>Store Support</td><td>Store Support</td><td><span class="badge badge-interactive">Interactive</span></td><td>Kalpesh/Sharan/Karthikeyan</td></tr>
-                    <tr><td class="time-col">16:45 - 17:00</td><td>Inventory & OB</td><td>Inventory & OB Strategy</td><td><span class="badge badge-interactive">Interactive</span></td><td>Kalpesh/Bivojit</td></tr>
+                    <tr><td class="time-col">12:45 - 13:15</td><td>Network & IB</td><td>Network & IB Planning</td><td><span class="badge badge-interactive">Interactive</span></td><td>Kalpeeshh/Gaurav</td></tr>
+                    <tr class="break-row" style="background:#fffdf0"><td class="time-col">13:15 - 14:30</td><td>Lunch & Check in 🍱</td><td></td><td></td><td></td></tr>
+                    <tr><td class="time-col">14:30 - 16:00</td><td>DS Supply</td><td>BBD 26 for Minutes & DS Supply planning</td><td><span class="badge badge-interactive">Interactive</span></td><td>Kalpeeshh/Chirant/Shubham</td></tr>
+                    <tr class="break-row" style="background:#fffdf0"><td class="time-col">16:00 - 16:15</td><td>Tea Break ☕</td><td></td><td></td><td></td></tr>
+                    <tr><td class="time-col">16:15 - 16:30</td><td>CT CX</td><td>CT CX</td><td><span class="badge badge-interactive">Interactive</span></td><td>Kalpeeshh/Sharan</td></tr>
+                    <tr><td class="time-col">16:30 - 16:45</td><td>Store Support</td><td>Store Support</td><td><span class="badge badge-interactive">Interactive</span></td><td>Kalpeeshh/Sharan/Karthikeyan</td></tr>
+                    <tr><td class="time-col">16:45 - 17:00</td><td>Inventory & OB</td><td>Inventory & OB Strategy</td><td><span class="badge badge-interactive">Interactive</span></td><td>Kalpeeshh/Bivojit</td></tr>
                     <tr><td class="time-col">17:00 - 18:00</td><td>North Zone</td><td>North Zone: Plan, Important Days & Execution Plan</td><td><span class="badge badge-interactive">Interactive</span></td><td>Anupam & Team</td></tr>
                     <tr><td class="time-col">18:00 - 19:00</td><td>East Zone</td><td>East Zone: Plan, Important Days & Execution Plan</td><td><span class="badge badge-interactive">Interactive</span></td><td>Amit & Team</td></tr>
                 </tbody>
@@ -304,22 +309,31 @@
 
         <!-- DAY 2 PANEL -->
         <div id="day2" class="day-panel">
-            <h2 class="day-title">Day 2: </h2>
+            <h2 class="day-title">Day 2:</h2>
             <table>
                 <thead>
                     <tr><th>Time</th><th>Segment</th><th>Content</th><th>Type</th><th>Facilitator</th></tr>
                 </thead>
                 <tbody>
-                    <tr><td class="time-col">09:30 - 10:30</td><td>West Zone</td><td>West Zone: Plan & Execution Plan</td><td><span class="badge badge-interactive">Interactive</span></td><td>Sai, Himanshu, Niranjan & Team</td></tr>
-                    <tr style="background:#fffdf0"><td class="time-col">10:30 - 10:45</td><td>Tea Break ☕</td><td>-</td><td><span class="badge badge-break">Break</span></td><td>-</td></tr>
-                    <tr><td class="time-col">10:45 - 11:45</td><td>South Zone</td><td>South Zone: Plan & Execution Plan</td><td><span class="badge badge-interactive">Interactive</span></td><td>Sankeerth & Team</td></tr>
-                    <tr><td class="time-col">11:45 - 12:45</td><td>LM Design</td><td>LM Design Strategy</td><td><span class="badge badge-interactive">Interactive</span></td><td>Priyesh & Team</td></tr>
-                    <tr><td class="time-col">12:45 - 13:45</td><td>DS & Network Design</td><td>DS & Network Design Strategy</td><td><span class="badge badge-interactive">Interactive</span></td><td>Hemanth & Team</td></tr>
-                    <tr style="background:#fffdf0"><td class="time-col">13:45 - 14:30</td><td>Lunch 🍱</td><td>-</td><td><span class="badge badge-break">Break</span></td><td>-</td></tr>
-                    <tr><td class="time-col">14:30 - 15:30</td><td>SH Strategy</td><td>SH & LH Strategy</td><td><span class="badge badge-interactive">Interactive</span></td><td>Amer, Sandeep, Indranil</td></tr>
+                    <tr><td class="time-col">09:30 - 10:30</td><td>West Zone</td><td>West Zone/Plan, Important Days Plan & Execution</td><td><span class="badge badge-interactive">Interactive</span></td><td>SaiNath, Himanshu, Niranjan/Rohan & Team</td></tr>
+                    <tr class="break-row" style="background:#fffdf0"><td class="time-col">10:30 - 10:45</td><td>Tea Break ☕</td><td></td><td></td><td></td></tr>
+                    <tr><td class="time-col">10:45 - 11:45</td><td>South Zone</td><td>South Zone/Plan, Important Days Plan & Execution Plan/ Support Required</td><td><span class="badge badge-interactive">Interactive</span></td><td>Sankeerth & Team</td></tr>
+                    <tr><td class="time-col">11:45 - 12:45</td><td>LM Design</td><td>LM Design</td><td><span class="badge badge-interactive">Interactive</span></td><td>Priyesh & Team</td></tr>
+                    <tr><td class="time-col">12:45 - 13:45</td><td>DS & Network Design</td><td>DS & Network Design</td><td><span class="badge badge-interactive">Interactive</span></td><td>Hemanth & Team</td></tr>
+                    <tr class="break-row" style="background:#fffdf0"><td class="time-col">13:45 - 14:30</td><td>Lunch 🍱</td><td></td><td></td><td></td></tr>
+                    <tr><td class="time-col">14:30 - 15:30</td><td>SH Strategy</td><td>SH & LH Strategy</td><td><span class="badge badge-interactive">Interactive</span></td><td>Amer, Sandeep & Team, Indranil</td></tr>
                     <tr><td class="time-col">15:30 - 15:50</td><td>Leader's Talk</td><td>Cross Functional Leadership Connect</td><td><span class="badge badge-interactive">Interactive</span></td><td>Bhujangappa</td></tr>
-                    <tr style="background:#fffdf0"><td class="time-col">15:50 - 16:00</td><td>Tea Break ☕</td><td>-</td><td><span class="badge badge-break">Break</span></td><td>-</td></tr>
-                    <tr><td class="time-col">16:00 - 18:00</td><td>Leadership Connects</td><td>Rapid Fire Leadership Sessions (Sri Krishnan, John James, Bapuji, Gunjan, Mani, Prabhakar, Anoop, R Srnivasan, Hemant Badri)</td><td><span class="badge badge-interactive">Interactive</span></td><td>Leadership Team</td></tr>
+                    <tr class="break-row" style="background:#fffdf0"><td class="time-col">15:50 - 16:00</td><td>Tea Break ☕</td><td></td><td></td><td></td></tr>
+                    <tr><td class="time-col">16:00 - 16:20</td><td>Leader's Talk</td><td>Leadership Connect</td><td><span class="badge badge-interactive">Interactive</span></td><td>Sri Krishnan</td></tr>
+                    <tr><td class="time-col">16:20 - 16:30</td><td>Leader's Talk</td><td>Leadership Connect</td><td><span class="badge badge-interactive">Interactive</span></td><td>John James</td></tr>
+                    <tr><td class="time-col">16:30 - 16:40</td><td>Leader's Talk</td><td>Leadership Connect</td><td><span class="badge badge-interactive">Interactive</span></td><td>Bapuji C</td></tr>
+                    <tr><td class="time-col">16:40 - 16:50</td><td>Leader's Talk</td><td>Leadership Connect</td><td><span class="badge badge-interactive">Interactive</span></td><td>Vasudevan G</td></tr>
+                    <tr><td class="time-col">16:50 - 17:00</td><td>Leader's Talk</td><td>Leadership Connect</td><td><span class="badge badge-interactive">Interactive</span></td><td>Gunjan Bhartia</td></tr>
+                    <tr><td class="time-col">17:00 - 17:10</td><td>Leader's Talk</td><td>Leadership Connect</td><td><span class="badge badge-interactive">Interactive</span></td><td>Manikandan R</td></tr>
+                    <tr><td class="time-col">17:10 - 17:20</td><td>Leader's Talk</td><td>Leadership Connect</td><td><span class="badge badge-interactive">Interactive</span></td><td>Prabhakar Kolla</td></tr>
+                    <tr><td class="time-col">17:20 - 17:30</td><td>Leader's Talk</td><td>Leadership Connect</td><td><span class="badge badge-interactive">Interactive</span></td><td>Anoop D</td></tr>
+                    <tr><td class="time-col">17:30 - 17:40</td><td>Leader's Talk</td><td>Leadership Connect</td><td><span class="badge badge-interactive">Interactive</span></td><td>R Srnivasan</td></tr>
+                    <tr><td class="time-col">17:40 - 18:10</td><td>Leader's Talk</td><td>Leadership Connect</td><td><span class="badge badge-interactive">Interactive</span></td><td>Hemant Badri</td></tr>
                     <tr style="background:#fef3f7"><td class="time-col">19:00 - 21:00</td><td>Party & Gala</td><td><strong>DJ, Cocktail & Dinner</strong> 🍸🎉</td><td><span class="badge badge-social">Social Event</span></td><td>All Attendees</td></tr>
                 </tbody>
             </table>
@@ -334,11 +348,11 @@
                 </thead>
                 <tbody>
                     <tr><td class="time-col">10:00 - 11:30</td><td>North Execution</td><td>North Zone Execution Plan & Support Required</td><td><span class="badge badge-interactive">Interactive</span></td><td>Anupam & Team</td></tr>
-                    <tr style="background:#fffdf0"><td class="time-col">11:30 - 11:45</td><td>Tea Break ☕</td><td>-</td><td><span class="badge badge-break">Break</span></td><td>-</td></tr>
+                    <tr class="break-row" style="background:#fffdf0"><td class="time-col">11:30 - 11:45</td><td>Tea Break ☕</td><td></td><td></td><td></td></tr>
                     <tr><td class="time-col">11:45 - 13:15</td><td>East Execution</td><td>East Zone Execution Plan & Support Required</td><td><span class="badge badge-interactive">Interactive</span></td><td>Amit & Team</td></tr>
-                    <tr style="background:#fffdf0"><td class="time-col">13:15 - 14:00</td><td>Lunch 🍱</td><td>-</td><td><span class="badge badge-break">Break</span></td><td>-</td></tr>
-                    <tr><td class="time-col">14:00 - 15:30</td><td>West Execution</td><td>West Zone Execution Plan & Support Required</td><td><span class="badge badge-interactive">Interactive</span></td><td>Sai, Himanshu, Niranjan & Team</td></tr>
-                    <tr style="background:#fffdf0"><td class="time-col">15:30 - 15:45</td><td>Tea Break ☕</td><td>-</td><td><span class="badge badge-break">Break</span></td><td>-</td></tr>
+                    <tr class="break-row" style="background:#fffdf0"><td class="time-col">13:15 - 14:00</td><td>Lunch 🍱</td><td></td><td></td><td></td></tr>
+                    <tr><td class="time-col">14:00 - 15:30</td><td>West Execution</td><td>West Zone Execution Plan & Support Required</td><td><span class="badge badge-interactive">Interactive</span></td><td>SaiNath, Himanshu, Niranjan & Team</td></tr>
+                    <tr class="break-row" style="background:#fffdf0"><td class="time-col">15:30 - 15:45</td><td>Tea Break ☕</td><td></td><td></td><td></td></tr>
                     <tr><td class="time-col">15:45 - 17:15</td><td>South Execution</td><td>South Zone Execution Plan & Support Required</td><td><span class="badge badge-interactive">Interactive</span></td><td>Sankeerth & Team</td></tr>
                     <tr><td class="time-col">17:15 - 17:30</td><td>Photo Session</td><td>Group Photo 📸</td><td><span class="badge badge-social">All Attendees</span></td><td>-</td></tr>
                     <tr><td class="time-col">17:30 - 18:00</td><td>Closure</td><td>Closing Talk & Q&A Session</td><td><span class="badge badge-monologue">Monologue</span></td><td>Renuka & Bapuji</td></tr>
